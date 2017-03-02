@@ -19,6 +19,7 @@
 </head>
 
 <body>
+  {{>navigation}}
   <div class="container">
     <div class="row">
       <h1>Tasks</h1>
@@ -31,7 +32,13 @@
       {{else}}
         <p>No tasks to show!</p>
       {{/if}}
+
     </div>
+      <form id='taskForm' action='/addTask' method='post'>
+        <label for='addTask'>Add a task</label>
+        <input id='addTask' name='taskName' placeholder='New Task' />
+        <button type='submit' class='btn btn-primary'>Submit</button>
+      </form>
   </div>
 
   <script src="https://code.jquery.com/jquery.js"></script>
